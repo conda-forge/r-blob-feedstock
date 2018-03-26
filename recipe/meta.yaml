@@ -21,11 +21,11 @@ build:
 requirements:
   build:
     - r-base
-    - r-tibble
+    - r-prettyunits
 
   run:
     - r-base
-    - r-tibble
+    - r-prettyunits
 
 test:
   commands:
