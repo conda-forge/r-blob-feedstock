@@ -14,9 +14,8 @@ Summary: R's raw vector is useful for storing a single binary object. What if yo
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-blob-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-blob-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-blob-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-blob-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-blob-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-blob-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-blob-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-blob-feedstock)
 
 Current release info
 ====================
