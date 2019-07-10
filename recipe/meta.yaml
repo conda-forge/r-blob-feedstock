@@ -22,10 +22,14 @@ requirements:
   build:
     - r-base
     - r-prettyunits
+    - r-rlang
+    - r-vctrs
 
   run:
     - r-base
     - r-prettyunits
+    - r-rlang
+    - r-vctrs
 
 test:
   commands:
