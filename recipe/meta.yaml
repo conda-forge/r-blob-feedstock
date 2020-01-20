@@ -1,54 +1,73 @@
-{% set version = "1.2.0" %}
+{% set version = '1.2.1' %}
+{% set posix = 'm2-' if win else '' %}
+{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-blob
-  version: {{ version }}
+  version: {{ version|replace("-", "_") }}
 
 source:
-  fn: blob_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/blob_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/blob/blob_{{ version }}.tar.gz
-  sha256: 1af1cfa28607bc0e2f1f01598a00a7d5d1385ef160a9e79e568f30f56538e023
+    - {{ cran_mirror }}/src/contrib/blob_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/blob/blob_{{ version }}.tar.gz
+  sha256: ef54bc7a9646c1b73f4d2f60c869b4f1940bc3505874175114297ad7772d8bea
 
 build:
+  merge_build_host: True  # [win]
+  number: 0
   noarch: generic
-  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
-    - r-prettyunits
     - r-rlang
-    - r-vctrs
-
+    - r-vctrs >=0.2.1
   run:
     - r-base
-    - r-prettyunits
     - r-rlang
-    - r-vctrs
+    - r-vctrs >=0.2.1
 
 test:
   commands:
-    - $R -e "library('blob')"  # [not win]
+    - $R -e "library('blob')"           # [not win]
     - "\"%R%\" -e \"library('blob')\""  # [win]
 
 about:
-  home: https://github.com/hadley/blob
+  home: https://github.com/tidyverse/blob
   license: GPL-3
-  summary: R's raw vector is useful for storing a single binary object. What if you want to put
-    a vector of them in a data frame? The blob package provides the blob object, a list
-    of raw vectors, suitable for use as a column in data frame.
-  license_family: GPL
+  summary: R's raw vector is useful for storing a single binary object.  What if you want to
+    put a vector of them in a data frame? The 'blob' package provides the blob object,
+    a list of raw vectors, suitable for use as a column in data frame.
+  license_family: GPL3
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - dpryan79
-    - bgruening
-    - daler
-    - johanneskoester
     - rvalieris
+
+# Package: blob
+# Title: A Simple S3 Class for Representing Vectors of Binary Data ('BLOBS')
+# Version: 1.2.1
+# Authors@R: c(person(given = "Hadley", family = "Wickham", role = "aut"), person(given = "Kirill", family = "Muller", role = "cre", email = "krlmlr+r@mailbox.org"), person(given = "RStudio", role = "cph"))
+# Description: R's raw vector is useful for storing a single binary object.  What if you want to put a vector of them in a data frame? The 'blob' package provides the blob object, a list of raw vectors, suitable for use as a column in data frame.
+# License: GPL-3
+# URL: https://github.com/tidyverse/blob
+# BugReports: https://github.com/tidyverse/blob/issues
+# Imports: methods, rlang, vctrs (>= 0.2.1)
+# Suggests: covr, crayon, pillar (>= 1.2.1), testthat
+# Encoding: UTF-8
+# LazyData: true
+# RoxygenNote: 7.0.2
+# NeedsCompilation: no
+# Packaged: 2020-01-20 22:32:38 UTC; kirill
+# Author: Hadley Wickham [aut], Kirill Muller [cre], RStudio [cph]
+# Maintainer: Kirill Muller <krlmlr+r@mailbox.org>
+# Repository: CRAN
+# Date/Publication: 2020-01-20 22:50:02 UTC

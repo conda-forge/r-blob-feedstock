@@ -1,13 +1,13 @@
 About r-blob
 ============
 
-Home: https://github.com/hadley/blob
+Home: https://github.com/tidyverse/blob
 
 Package license: GPL-3
 
 Feedstock license: BSD 3-Clause
 
-Summary: R's raw vector is useful for storing a single binary object. What if you want to put a vector of them in a data frame? The blob package provides the blob object, a list of raw vectors, suitable for use as a column in data frame.
+Summary: R's raw vector is useful for storing a single binary object.  What if you want to put a vector of them in a data frame? The 'blob' package provides the blob object, a list of raw vectors, suitable for use as a column in data frame.
 
 
 
@@ -67,7 +67,7 @@ A feedstock is made up of a conda recipe (the instructions on what and how to bu
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.org/) it is possible to build and upload installable
+and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
 packages to the [conda-forge](https://anaconda.org/conda-forge)
 [Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
 
@@ -116,10 +116,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
 * [@conda-forge/r](https://github.com/conda-forge/r/)
-* [@daler](https://github.com/daler/)
-* [@dpryan79](https://github.com/dpryan79/)
-* [@johanneskoester](https://github.com/johanneskoester/)
 * [@rvalieris](https://github.com/rvalieris/)
 
