@@ -1,4 +1,4 @@
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: r-blob
@@ -9,11 +9,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/blob_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/blob/blob_{{ version }}.tar.gz
-  sha256: 1af1cfa28607bc0e2f1f01598a00a7d5d1385ef160a9e79e568f30f56538e023
+  sha256: ef54bc7a9646c1b73f4d2f60c869b4f1940bc3505874175114297ad7772d8bea
 
 build:
   noarch: generic
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
