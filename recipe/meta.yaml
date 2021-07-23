@@ -1,4 +1,4 @@
-{% set version = '1.2.1' %}
+{% set version = "1.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/blob_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/blob/blob_{{ version }}.tar.gz
-  sha256: ef54bc7a9646c1b73f4d2f60c869b4f1940bc3505874175114297ad7772d8bea
+  sha256: 4976053c65994c769a4c22b4553bea0bd9c623b3b991dbaf023d2a164770c7fa
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -40,12 +40,10 @@ test:
 about:
   home: https://github.com/tidyverse/blob
   license: GPL-3.0-only
-  summary: R's raw vector is useful for storing a single binary object.  What if you want to
-    put a vector of them in a data frame? The 'blob' package provides the blob object,
-    a list of raw vectors, suitable for use as a column in data frame.
+  summary: R's raw vector is useful for storing a single binary object.  What if you want to put a vector of them in a data frame? The 'blob' package provides the blob object, a list of raw vectors, suitable for use as a column in data frame.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
