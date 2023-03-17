@@ -1,11 +1,11 @@
-About r-blob
-============
+About r-blob-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-blob-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tidyverse/blob
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-blob-feedstock/blob/main/LICENSE.txt)
 
 Summary: R's raw vector is useful for storing a single binary object.  What if you want to put a vector of them in a data frame? The 'blob' package provides the blob object, a list of raw vectors, suitable for use as a column in data frame.
 
