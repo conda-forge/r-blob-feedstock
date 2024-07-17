@@ -1,6 +1,5 @@
 {% set version = "1.2.4" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-blob
@@ -13,8 +12,7 @@ source:
   sha256: d08922ebc4147d930fe4762b1b289935217308c6d3fcaa5ae028ce3f5cf2728f
 
 build:
-  merge_build_host: true  # [win]
-  number: 1
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
